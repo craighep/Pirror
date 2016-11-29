@@ -9,7 +9,7 @@
 <script type="text/javascript" src="/scripts/weather.js"></script>
 <script type="text/javascript" src="/scripts/jokes.js"></script>
 </head>
-<body onload="startTime();getJoke();">
+<body>
 <table class="tg">
   <tr>
     <td colspan="2"><div id="weather"></div></td>
@@ -27,4 +27,12 @@
   </tr>
 </table>
 </body>
+<script type="text/javascript">
+	$( document ).ready(function() {
+    	startTime();
+    	getWeather();
+    	getJoke();
+    	$( "#clock" ).fadeIn( "slow", function() {});
+	});
+</script>
 </html>

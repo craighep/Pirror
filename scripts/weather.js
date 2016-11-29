@@ -1,6 +1,5 @@
-// v3.1.0
-//Docs at http://simpleweatherjs.com
-$(document).ready(function() {
+var tries = 0;
+function getWeather(){
   $.simpleWeather({
     location: '52.4340580,-1.8014060',
     woeid: '',
@@ -11,9 +10,17 @@ $(document).ready(function() {
       html += '<li class="currently">'+weather.currently+'</li>';
       html += '<li>'+weather.wind.direction+' '+weather.wind.speed+' '+weather.units.speed+'</li></ul>';
   
-      $("#weather").html(html);
+      $( "#weather" ).html(html);
+      $( "#weather" ).fadeIn( "slow", function() {
+      });
     },
     error: function(error) {      
+      tries++;
+      if(tries > 3){
+        // nothing
+        return;
+      }
+      var t = setTimeout(getWeather, 1000*5);
     }
   });
-});
+}

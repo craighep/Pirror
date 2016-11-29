@@ -23,10 +23,14 @@ body{
 }
 #clock{
 	font-size: 75px;
+	display: none;
 }
 #jokes{
 	font-size: 20px;
 }
 #words{
 	font-size: 19px;
+}
+#weather{
+	display: none;
 }

@@ -1,6 +1,11 @@
 function getJoke(){
 	$.getJSON( "https://api.chucknorris.io/jokes/random", function( data ) {
-		$("#jokes").html(data['value']);
+		$( "#jokes" ).fadeOut( "slow", function() {
+			$("#jokes").html(data['value']);
+      	});
+		$( "#jokes" ).fadeIn( "slow", function() {
+     	});
+
 	});
-	var t = setTimeout(startTime, 1000*60*60);
+	var t = setTimeout(getJoke, 1000*600);
 }
