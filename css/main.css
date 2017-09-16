@@ -25,8 +25,11 @@ body{
 	font-size: 75px;
 	display: none;
 }
-#jokes{
+#jokes,#news{
 	font-size: 20px;
+}
+#news-sub{
+	font-size:17px;
 }
 #words{
 	font-size: 19px;

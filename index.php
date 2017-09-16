@@ -8,6 +8,7 @@
 <script type="text/javascript" src="/scripts/jquery.simpleWeather.js"></script>
 <script type="text/javascript" src="/scripts/weather.js"></script>
 <script type="text/javascript" src="/scripts/jokes.js"></script>
+<script type="text/javascript" src="/scripts/news.js"></script>
 </head>
 <body>
 <table class="tg">
@@ -25,13 +26,17 @@
   <tr>
     <td colspan="8" id="jokes"></td>
   </tr>
+  <tr>
+    <td colspan="8" id="news"></td>
+  </tr>
 </table>
 </body>
 <script type="text/javascript">
 	$( document ).ready(function() {
     	startTime();
     	getWeather();
-    	getJoke();
+    	//getJoke();
+		getNews();
     	$( "#clock" ).fadeIn( "slow", function() {});
 	});
 </script>
