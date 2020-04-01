@@ -12,5 +12,5 @@ function getNews(){
      	});
 	});
 	i++;
-	var t = setTimeout(getNews, 1000*7);
+	var t = setTimeout(getNews, 1000*8);
 }
